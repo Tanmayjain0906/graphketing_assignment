@@ -1,0 +1,27 @@
+.pagination-component {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    
+}
+
+/* Optional custom styles for the pagination */
+.MuiPaginationItem-root {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Active page styling */
+.MuiPaginationItem-selected {
+    background-color: #003366 !important;
+    color: #ffffff !important;
+    border: 1px solid #003366 !important;
+}

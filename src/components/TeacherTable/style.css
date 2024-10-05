@@ -1,0 +1,103 @@
+.table-container {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead th {
+  background: #003366;
+  color: white;
+  padding: 15px 10px;
+  text-align: left;
+}
+
+tbody tr {
+  background: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background: #f7f9fc;
+}
+
+tbody td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.status {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.status.active {
+  color: green;
+}
+
+.status.inactive {
+  color: orange;
+}
+
+.status.blocked {
+  color: red;
+}
+
+.status.suspended {
+  color: #ff6600;
+}
+
+.status::before {
+  content: '•';
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+a {
+  color: #003366;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #003366;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #00509e;
+}
+
+.no-user {
+  text-align: center; /* Center text horizontally */
+  margin: 0; /* Remove any default margins */
+  padding: 16px; /* Add some padding for spacing */
+  font-size: 1.2rem; /* Adjust the font size if needed */
+}
