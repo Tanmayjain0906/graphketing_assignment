@@ -22,7 +22,7 @@
   
   h2 {
     margin-bottom: 20px;
-    color: #003366; /* Use the same color as your logo */
+    color: #003366; 
   }
   
   label {
@@ -55,12 +55,12 @@
   }
   
   button[type="button"] {
-    background: #f44336; /* Red for cancel */
+    background: #f44336; 
     color: white;
   }
   
   button[type="submit"] {
-    background: #4caf50; /* Green for submit */
+    background: #4caf50; 
     color: white;
   }
   

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./style.css";
 import logo from "../../assets/logo.svg"
-import userProfile from "../../assets/user-profile.svg"; // Update this path with your user image path
+import userProfile from "../../assets/user-profile.svg";
 import searchIcon from "../../assets/search.svg";
 import notificationBell from "../../assets/notification.svg"
 import userListContext from "../../context/userListContext";
@@ -35,14 +35,14 @@ const Header = () => {
 
   return (
     <header className="header">
-      {/* Left Section: Sidebar Toggle & Logo */}
+      
       <div className="left-section">
         <div className="logo" onClick={() => setShowFilter(!showFilter)}>
           <img src={logo} alt="Logo" />
         </div>
       </div>
 
-      {/* Center Section: Welcome Message & Search Bar */}
+     
       <div className="center-section">
         <p className="welcome-text">Welcome, User!</p>
         <div className="search-bar">
@@ -53,7 +53,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Right Section: Icons & Profile Picture */}
+     
       <div className="right-section">
         <button className="notification-icon">
           <img src={notificationBell} className="fas fa-bell" />

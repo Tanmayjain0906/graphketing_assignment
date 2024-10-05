@@ -10,9 +10,9 @@
 
 .data-filters-container {
   position: absolute;
-  top: 70px; /* Adjust as per your header height */
+  top: 70px; 
   left: 10px;
-  z-index: 1000; /* Ensure it appears above other content */
+  z-index: 1000; 
 }
 
 .left-section, .center-section, .right-section {

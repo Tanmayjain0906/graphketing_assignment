@@ -5,18 +5,18 @@ import CloseIcon from '@mui/icons-material/Close';
 import userListContext from '../../context/userListContext';
 
 const DataFilters = () => {
-  // Set initial state to have "All" selected for both categories
+
   const {handleCategory, department, status} = useContext(userListContext);
   const [selectedFilters, setSelectedFilters] = useState({
     department: department,
     status: status
   });
 
-  // Accordion state
+  
   const [expanded, setExpanded] = useState(false);
   
 
-  // Toggle accordion sections
+
   const handleAccordionChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };

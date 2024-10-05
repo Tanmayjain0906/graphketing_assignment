@@ -89,7 +89,7 @@ function UserListProvider(props) {
     }));
   }
 
-  // Function to add a new user to the list
+
   function addInList(newUser) {
     const updatedUserList = [...userList, newUser];
     setUserList(updatedUserList);

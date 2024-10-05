@@ -8,7 +8,7 @@
     
 }
 
-/* Optional custom styles for the pagination */
+
 .MuiPaginationItem-root {
     width: 36px;
     height: 36px;
@@ -19,7 +19,7 @@
     border-radius: 4px;
 }
 
-/* Active page styling */
+
 .MuiPaginationItem-selected {
     background-color: #003366 !important;
     color: #ffffff !important;

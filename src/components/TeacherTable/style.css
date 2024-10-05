@@ -73,7 +73,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Pagination Styling */
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -96,8 +96,8 @@ a:hover {
 }
 
 .no-user {
-  text-align: center; /* Center text horizontally */
-  margin: 0; /* Remove any default margins */
-  padding: 16px; /* Add some padding for spacing */
-  font-size: 1.2rem; /* Adjust the font size if needed */
+  text-align: center; 
+  margin: 0; 
+  padding: 16px; 
+  font-size: 1.2rem; 
 }
