@@ -5,8 +5,7 @@ import "./style.css";
 import PaginationComponent from "../Pagination";
 
 function TeacherTable() {
-  const { teacherData } = useContext(userListContext);
-  const [page, setPage] = useState(1);
+  const { teacherData, page, setPage } = useContext(userListContext);
   const [totalPages, setTotalPages] = useState(Math.ceil(teacherData.length / 10))
   const [list, setList] = useState([]);
 
@@ -18,17 +17,17 @@ function TeacherTable() {
   }
 
   useEffect(() => {
-    if (teacherData.length === 10 || teacherData.length > 10) {
-      setList(teacherData.slice(0, 10))
-    }
-    else if (teacherData.length < 10 && teacherData.length > 0 && page === 1) {
-      setList(teacherData);
-    }
-    else if (teacherData.length == 0) {
-      setList([]);
-    }
+    // Calculate the starting and ending index based on the current page
+    
+    const startingIndex = (page - 1) * 10;
+    const lastIndex = startingIndex + 10;
+
+    // Update the list based on the sliced data for the current page
+    setList(teacherData.slice(startingIndex, lastIndex));
+
+    // Update total pages whenever teacherData changes
     setTotalPages(Math.ceil(teacherData.length / 10));
-  }, [teacherData])
+  }, [teacherData, page]);
 
   return (
     <div className="table-container">

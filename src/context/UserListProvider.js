@@ -25,6 +25,7 @@ function UserListProvider(props) {
   const [filteredList, setFilteredList] = useState(list);
   const [filterName, setFilterName] = useState('');
   const [department , setDepartment] = useState("All");
+  const [page, setPage] = useState(1);
   const [status, setStatus] = useState("All");
 
   function handleCategory(departmentValue, statusValue)
@@ -32,22 +33,26 @@ function UserListProvider(props) {
     setFilteredList(userList.filter((item) => {
       if(departmentValue !== "All" && statusValue === "All")
       {
+        setPage(1);
         setDepartment(departmentValue)
         return item.department === departmentValue;
       }
       else if(departmentValue === "All" && statusValue !== "All")
       {
+        setPage(1);
         setStatus(statusValue)
         return item.status === statusValue;
       }
       else if(departmentValue !== "All" && statusValue !== "All")
       {
+        setPage(1);
         setDepartment(departmentValue)
         setStatus(statusValue)
         return item.department === departmentValue && item.status === statusValue;
       }
       else
       {
+        setPage(1);
         setDepartment("All");
         setStatus("All");
         return true;
@@ -63,18 +68,22 @@ function UserListProvider(props) {
     setFilteredList(userList.filter((item) => {
       if(department === "All" && status === "All")
       {
+        setPage(1);
         return item.name.toLowerCase().includes(lowerCasedName);
       }
       else if(department !== "All" && status === "All")
       {
+        setPage(1);
         return item.name.toLowerCase().includes(lowerCasedName) && item.department === department;
       }
       else if(department === "All" && status !== "All")
       {
+        setPage(1);
         return item.name.toLowerCase().includes(lowerCasedName) && item.status === status;
       }
       else if(department !== "All" && status !== "All")
       {
+        setPage(1);
         return item.name.toLowerCase().includes(lowerCasedName) && item.status === status && item.department === department;
       }
     }));
@@ -88,7 +97,7 @@ function UserListProvider(props) {
   }
 
   return (
-    <userListContext.Provider value={{ teacherData: filteredList, filterList, addInList, handleCategory, department, status}}>
+    <userListContext.Provider value={{ teacherData: filteredList, filterList, addInList, handleCategory, department, status, page, setPage}}>
       {props.children}
     </userListContext.Provider>
   );
